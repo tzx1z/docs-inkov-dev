@@ -8,7 +8,7 @@
 
 ## English
 
-Documentation for projects by [Evgenii Inkov](https://inkov.dev/en/).
+Documentation for projects by [Evgeny Inkov](https://inkov.dev/en/).
 
 | Project | Description |
 |---|---|
