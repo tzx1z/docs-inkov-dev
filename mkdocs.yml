@@ -1,0 +1,57 @@
+# Корень сайта документации: https://docs.inkov.dev/
+# Документация проектов собирается в своих репозиториях и подключена в Read the Docs
+# как subprojects этого проекта, адреса вида https://docs.inkov.dev/projects/<alias>/.
+# Сборка на Read the Docs (.readthedocs.yaml). Локальный просмотр:
+#   pip install -r requirements-docs.txt && mkdocs serve
+#   адрес: http://127.0.0.1:8000/
+
+site_name: docs.inkov.dev
+site_description: Документация проектов Евгения Инькова
+# На Read the Docs адрес берется из окружения сборки, локально - значение по умолчанию
+site_url: !ENV [READTHEDOCS_CANONICAL_URL, "https://docs.inkov.dev/"]
+
+repo_url: https://github.com/tzx1z/docs-inkov-dev
+repo_name: tzx1z/docs-inkov-dev
+edit_uri: edit/main/docs/
+
+# Битые ссылки и файлы вне навигации - предупреждения,
+# а на Read the Docs (mkdocs.fail_on_warning) - ошибка сборки.
+# Ссылки на subprojects в docs/index.md - полные URL с https://:
+# относительную ссылку projects/<alias>/ MkDocs считает битой.
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Проекты: index.md
+
+theme:
+  name: material
+  language: ru
+  features:
+    - content.action.edit
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Темная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+
+plugins:
+  - search:
+      lang: [ru, en]
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true

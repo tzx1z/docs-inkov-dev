@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.inkov.dev/sitemap.xml
+Sitemap: https://docs.inkov.dev/projects/xmpp-server-guides/sitemap.xml

@@ -1,0 +1,5 @@
+# Зависимости сборки сайта (mkdocs.yml). Версии закреплены и совпадают с subprojects:
+# MkDocs 2.0 несовместим с плагинами и темой Material, поэтому mkdocs строго 1.6.1.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+pymdown-extensions==12.1
