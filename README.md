@@ -7,6 +7,7 @@
 
 | Проект | Репозиторий | Адрес |
 |---|---|---|
+| termisations | [tzx1z/termisations](https://github.com/tzx1z/termisations) | https://docs.inkov.dev/projects/termisations/ |
 | XMPP Server Guides | [tzx1z/xmpp-server-guides](https://github.com/tzx1z/xmpp-server-guides) | https://docs.inkov.dev/projects/xmpp-server-guides/ |
 
 ## Структура
@@ -35,7 +36,9 @@ mkdocs serve            # http://127.0.0.1:8000/
 - Проект `docs-inkov-dev`, URL versioning scheme - `Single version without translations`.
 - Settings -> Domains: `docs.inkov.dev`, Canonical. Custom domain можно привязать
   только к этому проекту: subprojects всегда открываются на домене основного проекта.
-- Settings -> Subprojects: `xmpp-server-guides`, alias `xmpp-server-guides`.
+- Settings -> Subprojects, проект и alias:
+  - `termisations`, alias `termisations`;
+  - `xmpp-server-guides`, alias `xmpp-server-guides`.
 - Settings -> Redirects: адреса, которые открывались от корня домена до перехода на subprojects.
 
   | Type | From URL | To URL |
